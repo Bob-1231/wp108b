@@ -70,6 +70,29 @@ form{
     font-size:16px;
     color:#555;
 }
+.diamond{
+    margin-left:350px;
+    margin-top:10px;
+    width:125px;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+}
+.adddiamond{
+    margin-left:340px;
+}
+.protect, .device{
+    margin-left:25px;
+    margin-top:10px;
+    width:125px;
+    color:white;
+    font-size:18px;
+    font-weight:700;
+}
+.button{
+    padding:5px;
+    margin-left:730px;
+}
 
 </style>
 </head>
@@ -80,33 +103,32 @@ form{
     <form>
     
     <div id="resources">
-    <h3 class="gold">金幣</h3>
-    <input class="addgold" type="text"><br>
-    <h3 class="voucher">點券</h3>
-    <input class="addvoucher" type="text"><br>
-    <h3 class="diamond">鑽石</h3>
-    <select>
-        <option>1000</option>
-        <option>5000</option>
-        <option>50000</option>
-        <option>99999</option>
-    </select><br>
+        <h3 class="gold">金幣</h3>
+        <input class="addgold" type="text"><br>
+        <h3 class="voucher">點券</h3>
+        <input class="addvoucher" type="text"><br>
+        <h3 class="diamond">鑽石</h3>
+        <select class="adddiamond">
+            <option>1000</option>
+            <option>5000</option>
+            <option>50000</option>
+            <option>99999</option>
+        </select><br>
     </div>
 
     <div id="protect">
-    <h3 class="protect">Protection</h3>
-    <input class="system" type="radio">SystemFraudOFF<br>
-    <input class="proxy" type="radio">Anonymous Proxy<br>
+        <h3 class="protect">Protection</h3>
+        <input class="system" type="radio">SystemFraudOFF<br>
+        <input class="proxy" type="radio">Anonymous Proxy<br>
     </div>
 
     <div id="device">
-    <h3 class="device">Device</h3>
-    <img scr="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png" alt="Android">
-    <img scr="https://f0.pngfuel.com/png/640/664/apple-logo-png-clip-art.png" alt="iOS"><br>
-    <input type="radio"><input type="radio"><br>
+        <h3 class="device">Device</h3>
+        <input type="radio">Android<br>
+        <input type="radio">iOS<br>
     </div>
 
-    <button type="submit">Hack</button>
+    <button class="button" type="submit">Hack</button>
 
     </form>
 </div>

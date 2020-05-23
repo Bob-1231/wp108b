@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>困難賽道</title>
+<style>
+    h2{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    table{
+        font-size: large;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    table, th, td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+
+    .home{
+        font-size: 25px;
+        margin-top: 25px;
+        text-align: center;
+        background-color: burlywood;
+    }
+
+    a:link{
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: red;
+    }
+
+    /*隱藏側欄內容*/
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    /*側欄網址排版*/
+    .sidenav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.1s;
+    }
+
+    .sidenav a:hover{
+        color: chocolate;
+        background-color: bisque;
+    }
+
+    .sidenav .closebut{
+        font-size: 25px;
+    }
+
+    h2 .but{
+        color: white;
+        font-size: 25px;
+        cursor:pointer; /*滑鼠移上去變圖案*/
+        float: left;
+    }
+    h2 .but:hover{
+        color:deepskyblue;
+    }
+</style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebut" onclick="closeNav()">&times;</a>
+        <a href="easy.html">簡單賽道</a>
+        <a href="normal.html">普通賽道</a>
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+    <h2><span class="but" onclick="openNav()">&#9967;</span>Hard Map</h2>
+
+    <table style="width: 70%">
+        <tr>
+            <th>賽道名稱</th>
+            <th>賽道圖片</th>
+            <th>簡短介紹</th>
+        </tr>
+        <tr>
+            <th>
+                <pre>急速空港(七星)</pre>
+            </th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20190108/1e2681225a98cd914a54fc0765478dd3.jpg"
+                    width="500" height="200"></td>
+            <td>疾馳在流星飛逝的瞬間，太空城市中用全息投影記錄永恆，穿梭在群星璀璨的浩瀚，在極速空港感受全新科技的魅力；漂移在探索宇宙的哨站，在太空基地裡感受無重力帶來的極限體驗。在這裡發現屬於外太空的壯觀，挑戰屬於你的極速夢想！
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <pre>美洲大峽谷(六星)</pre>
+            </th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20171211/61_9394613.jpg"
+                    width="500" height="200"></td>
+            <td>越過紅沙峭壁，感受峽谷蜿蜒崎嶇；在空中走廊漂移，俯瞰大自然的鬼斧神工；穿梭叢林祕境，挑戰極速心跳。</td>
+        </tr>
+        <tr>
+            <th>
+                <pre>莫高窟(五星)</pre>
+            </th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20180904/e4e67d4825b6cc7ecf1a5a3491488314.jpg"
+                    width="500" height="200"></td>
+            <td>穿越荒蕪的沙漠，無數的旅人沿著通幽曲徑探尋而來，只為一睹莫高窟的珍奇與輝煌——千姿百態的壁畫、驚為天人的泥質彩塑、莊嚴的佛像、寓意深遠的藏經，蘊藏著求道之人歷代的祝福和期許。</td>
+        </tr>
+    </table>
+
+
+    <div class="home">
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+
+</body>
+
+</html>

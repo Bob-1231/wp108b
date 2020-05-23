@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>簡單賽道</title>
+<style>
+    h2{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    table{
+        font-size: large;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    table, th, td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+
+    .home{
+        font-size: 25px;
+        margin-top: 25px;
+        text-align: center;
+        background-color: burlywood;
+    }
+
+    a:link{
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: red;
+    }
+
+    /*隱藏側欄內容*/
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    /*側欄網址排版*/
+    .sidenav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.1s;
+    }
+
+    .sidenav a:hover{
+        color: chocolate;
+        background-color: bisque;
+    }
+
+    .sidenav .closebut{
+        font-size: 25px;
+    }
+
+    h2 .but{
+        color: white;
+        font-size: 25px;
+        cursor:pointer; /*滑鼠移上去變圖案*/
+        float: left;
+    }
+    h2 .but:hover{
+        color:deepskyblue;
+    }
+</style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebut" onclick="closeNav()">&times;</a>
+        <a href="normal.html">普通賽道</a>
+        <a href="hard.html">困難賽道</a>
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+    <h2><span class="but" onclick="openNav()">&#9967;</span>Easy Map</h2>
+
+    <table style="width: 70%">
+        <tr>
+            <th>賽道名稱</th>
+            <th>賽道圖片</th>
+            <th>簡短介紹</th>
+        </tr>
+        <tr>
+            <th><pre>中國城(一星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20171225/shouye-06_7388993.jpg"
+                    width="500" height="200"></td>
+            <td>和蜿蜒的祥龍一起馳騁壯美河山，穿梭於青磚紅瓦的城之間，在漂移中感受家的溫暖。</td>
+        </tr>
+        <tr>
+            <th><pre>法老金字塔(二星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20171225/shouye-02_724959.jpg"
+                    width="500" height="200"></td>
+            <td>和神聖的獅身人面像對視，在錯綜複雜的密道內激情馳騁，飛躍俯瞰這座宏偉的奇蹟，新的異域探險就此開啟。</td>
+        </tr>
+        <tr>
+            <th><pre>馬達加斯加(二星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20171211/22_8791421.jpg"
+                    width="500" height="200"></td>
+            <td>在廣闊的草原和動物們盡情奔馳，火山隧道的穿越感受心跳加速，馬達加斯加的午後讓你享受異域的熱情。</td>
+        </tr>
+    </table>
+
+
+    <div class="home">
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+
+</body>
+
+</html>

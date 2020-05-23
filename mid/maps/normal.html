@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>普通賽道</title>
+<style>
+    h2{
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    table{
+        font-size: large;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    table, th, td{
+        border: 2px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+
+    .home{
+        font-size: 25px;
+        margin-top: 25px;
+        text-align: center;
+        background-color: burlywood;
+    }
+
+    a:link{
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: red;
+    }
+
+    /*隱藏側欄內容*/
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    /*側欄網址排版*/
+    .sidenav a{
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.1s;
+    }
+
+    .sidenav a:hover{
+        color: chocolate;
+        background-color: bisque;
+    }
+
+    .sidenav .closebut{
+        font-size: 25px;
+    }
+
+    h2 .but{
+        color: white;
+        font-size: 25px;
+        cursor:pointer; /*滑鼠移上去變圖案*/
+        float: left;
+    }
+    h2 .but:hover{
+        color:deepskyblue;
+    }
+</style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebut" onclick="closeNav()">&times;</a>
+        <a href="easy.html">簡單賽道</a>
+        <a href="hard.html">困難賽道</a>
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+    <h2><span class="but" onclick="openNav()">&#9967;</span>Normal Map</h2>
+
+    <table style="width: 70%">
+        <tr>
+            <th>賽道名稱</th>
+            <th>賽道圖片</th>
+            <th>簡短介紹</th>
+        </tr>
+        <tr>
+            <th><pre>長城(四星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20180326/ed0633a8e49bc3058e8eda3219440918.jpg"
+                    width="500" height="200"></td>
+            <td>層層梯田，蜿蜒的長城起伏在翠綠的群山，守衛相伴，時光流轉孕育春的希望；烽火四起，雪霧瀰漫，蒼勁的長城起伏在茫茫的青原，白雪描繪冬的寧靜。</td>
+        </tr>
+        <tr>
+            <th><pre>故園歸醉(三星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20190215/f7c2826e02c836aefff936e6e59aa4d6.jpg"
+                    width="500" height="200"></td>
+            <td>雪山巍峨，朵朵雪花從空中飄落，靜聽雪落下的聲音；霓虹閃爍，湖面結了厚厚的冰，踱步於冰湖上的木橋。小豬雪人挑著燈籠指引方向，釀酒坊裡燈火通明，酒香四溢，張燈結彩慶祝著新年的到來。賽道邊，積雪已除，彩燈已亮；故園裡，梅花已開，美酒已釀，靜等各位賽車手的到來！</td>
+        </tr>
+        <tr>
+            <th><pre>龍門新春(三星)</pre></th>
+            <td><img src="https://game.gtimg.cn/images/speedm/zlkdatasys/data/maps/image/20171211/314_9641563.jpg"
+                    width="500" height="200"></td>
+            <td>穿過高牆幽巷，在古街舊道極限追逐，轉過山峰急彎，淌過湍流河水，感受魚躍龍門的心情。</td>
+        </tr>
+    </table>
+
+
+    <div class="home">
+        <a href="../page.html">返回首頁</a>
+    </div>
+
+
+</body>
+
+</html>

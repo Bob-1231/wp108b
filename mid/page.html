@@ -9,7 +9,7 @@
         function showTime(){
             var nowdate = new Date();
             var y = nowdate.getFullYear();
-            var mon = nowdate.getMonth() + 1;
+            var mon = nowdate.getMonth() + 1;   /*顯示會少一個月份 所以+1*/
             var d = nowdate.getDate();
             var h = nowdate.getHours();
             var m = nowdate.getMinutes();
@@ -26,12 +26,14 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+                /*功能表*/
     .navbar{
-        overflow:hidden;
+        overflow:hidden;    /*自動隱藏超出的文字或圖片*/
         background-color: black;
         font-size: 20px;
         color: white;
     }
+                /*功能表中的連結設定*/
     .navbar a{
         float:left;
         text-decoration: none;
@@ -39,9 +41,11 @@
         padding: 15px 15px;
         text-align: center;
     }
+                /*滑鼠指上連結時*/
     .navbar a:hover{
         background-color: red;
     }
+                /*功能表落下選項設定*/
     .dropdown {
         float: left;
         overflow: hidden;
@@ -65,20 +69,21 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
+                /*時間顯示欄設定*/
     #timebox{
         text-align: center;
         font-size: x-large;
         background-color: azure;
         padding:10px;
     }
-
+                /*圖片輪播設定*/
     .slide{
         margin: 20px auto;
         border: 10px burlywood solid;
         width: 600px;
         height: 379px;
         overflow: hidden;
-        position: relative;
+        position: relative;     
         background-color: #000;
     }
     .slide div{
@@ -86,9 +91,11 @@
         height: 100%;
         background-size: cover;
         position: absolute;
-        animation: slide 25s infinite;
-        opacity: 0;
+        animation: slide 25s infinite;    /*所有動畫屬性*/
+        opacity: 0; /*調整透明效果*/
     }
+
+                    /*每張圖片間隔第一張圖幾秒後顯示*/
     .slide div:nth-child(2) {
         animation-delay: 5s
     }
@@ -102,19 +109,19 @@
         animation-delay: 20s
     }
     
-    
+                /*搭配opacity跟transform達到淡入淡出和放大的特效*/
     @keyframes slide{
         10% {
-            opacity: 1;
+            opacity: 1;     /*圖片淡入*/
         }
         20% {
-            opacity: 1;
+            opacity: 1;     /*圖片靜止*/
         }
         30% {
-            opacity: 0;
+            opacity: 0;     /*圖片淡出*/
         }
         40% {
-            transform: scale(1.1);
+            transform: scale(1.1);  /*圖片放大*/
         }
     }
     @media only screen and (max-width:500px) {
@@ -154,7 +161,13 @@
         <div>
             <img src="5.png" width="600" length="1200">
         </div>
-    </div> 
+    </div>
+    
+    <div class="music">
+        <audio controls>
+            <source src="music.mp3" type="audio/mp3">
+        </audio>
+    </div>
 
     <body onload="showTime()">
         <div id="timebox"></div>

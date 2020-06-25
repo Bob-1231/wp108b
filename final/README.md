@@ -1,6 +1,6 @@
 1.並非原創   
 2.javascript語法皆從以下網址修改   
-3.javascript內容小幅修改
+3.javascript內容小幅修改   
 4.API、XHR物件只能部分理解，json完全無法理解
 
 # 參考來源

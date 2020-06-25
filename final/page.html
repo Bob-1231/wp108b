@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>翻譯</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+    crossorigin="anonymous">
+    <script data-ad-client="ca-pub-4112365633165899" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Lato|Saira+Stencil+One&display=swap');
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .display {
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        overflow: auto;
+    }
+
+    .header {
+        width: 100%;
+        height: 15vh;
+        background-color:black;
+    }
+
+    .title {
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        color: white;
+        text-align: center;
+        padding-top:23px;
+        font-family: 'Saira Stencil One', cursive;
+    }
+
+    .from {
+        width: 90%;
+        height: 150px;
+        margin-top: 7px;
+    }
+
+    .to {
+        width: 90%;
+        height: 150px;
+        margin-top: 25px;
+    }
+
+    .select {
+        border: none;
+        height: 100%;
+        font-size: 24px;
+        font-family: 'Lato', sans-serif;
+        padding-left: 10%;
+        padding-right: 10%;
+        background-color: white;
+        color: #55f;
+    }
+
+    .selectdiv {
+        width: 100%;
+        height: 20%;
+        margin-left:10%;
+    }
+
+    .inputdiv, #output {
+        width: 90%;
+        height: 120px;
+        margin-left: 10%;
+        margin-top: 15px;
+        background-color: white;
+    }
+
+    #output {
+        font-family: 'Lato', sans-serif;
+        border: 2px solid #55f;
+        font-size: 24px;
+    }
+
+
+    .input {
+        width: 100%;
+        height: 97%;
+        border: 2px solid #55f;
+        font-size: 24px;
+        font-family: 'Lato', sans-serif;
+    }
+
+    .end {
+        width: 100%;
+        height: 45px;
+        background-color: #55f;
+        margin-top: 33px;
+        text-align: center;
+        color: white;
+        font-family: 'Saira Stencil One', cursive;
+        font-size: 25px;
+    }
+
+
+</style>
+
+    <script>
+
+    window.onload = () => {
+
+        ttext.addEventListener('input', e => {
+    
+
+
+        var fromLang = document.getElementById("from").value;
+   
+        var toLang = document.getElementById("to").value;
+        var text = document.getElementById("ttext").value;
+        var output = document.getElementById("output");
+       
+        var url = "https://translate.yandex.net/api/v1.5/tr.json/translate";
+        var keyAPI = "trnsl.1.1.20190803T115559Z.908e79c70b9b708b.928873fade76022faec2c1e283e17dc80a1d538f";
+        var xhr = new XMLHttpRequest();
+       
+        var textAPI = text;
+        var langAPI = fromLang + "-" + toLang;
+        
+        
+        
+        
+        var data = "key="+keyAPI+"&text="+textAPI+"&lang="+langAPI;
+
+        xhr.open("POST",url,true);
+        xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xhr.send(data);
+        xhr.onreadystatechange = function() {
+            if (this.readyState==4 && this.status==200) {
+                var res = this.responseText;
+             
+                var json = JSON.parse(res);
+                if(json.code == 200) {
+                    output.innerHTML = json.text[0];
+                }
+                else {
+                    console.log("Error Code: " + json.code);
+                }
+            }
+        }
+        }
+        );
+    }
+
+
+    </script>
+</head>
+<body>
+
+    <div class="display">
+
+        <div class="header">
+            <div class="title">中英翻譯</div>
+        </div>
+
+
+        <div class="from">
+            <div class="selectdiv">
+                <select class="select" id="from">
+                    <option value="ch">Chinese</option>
+                    <option value="en" selected>English</option>
+                </select>
+            </div>
+
+            <div class="inputdiv">
+                <textarea placeholder="Enter text" class="input" id="ttext"></textarea>
+            </div>
+        </div>
+
+
+        <div class="to">
+            <div class="selectdiv">
+                <select class="select" id="to">
+                    <option value="zh" selected>Chinese</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <div id="output">
+                
+            </div>
+        </div>
+
+
+        <div class="end">
+            <p>Translator Test</p>
+        </div>
+    </div>
+
+
+</body>
+</html>
